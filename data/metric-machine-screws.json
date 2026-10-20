@@ -1,0 +1,348 @@
+{
+ "meta": {
+  "title": "Metric machine screws (coarse + fine)",
+  "lastVerified": "2026-10-13",
+  "sources": [
+   "ISO 261",
+   "ISO 262",
+   "ISO 273"
+  ]
+ },
+ "rows": [
+  {
+   "label": "M1.6",
+   "system": "metric",
+   "coarsePitch": 0.35,
+   "finePitches": [],
+   "majorDiameterMm": 1.6,
+   "majorDiameterIn": 0.063,
+   "tapDrillCoarse": 1.25,
+   "clearance": {
+    "fine": 1.7,
+    "medium": 1.8,
+    "coarse": 2.0
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M2",
+   "system": "metric",
+   "coarsePitch": 0.4,
+   "finePitches": [],
+   "majorDiameterMm": 2.0,
+   "majorDiameterIn": 0.0787,
+   "tapDrillCoarse": 1.6,
+   "clearance": {
+    "fine": 2.2,
+    "medium": 2.4,
+    "coarse": 2.6
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M2.5",
+   "system": "metric",
+   "coarsePitch": 0.45,
+   "finePitches": [],
+   "majorDiameterMm": 2.5,
+   "majorDiameterIn": 0.0984,
+   "tapDrillCoarse": 2.05,
+   "clearance": {
+    "fine": 2.7,
+    "medium": 2.9,
+    "coarse": 3.1
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M3",
+   "system": "metric",
+   "coarsePitch": 0.5,
+   "finePitches": [],
+   "majorDiameterMm": 3.0,
+   "majorDiameterIn": 0.1181,
+   "tapDrillCoarse": 2.5,
+   "clearance": {
+    "fine": 3.2,
+    "medium": 3.4,
+    "coarse": 3.6
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M3.5",
+   "system": "metric",
+   "coarsePitch": 0.6,
+   "finePitches": [],
+   "majorDiameterMm": 3.5,
+   "majorDiameterIn": 0.1378,
+   "tapDrillCoarse": 2.9,
+   "clearance": {
+    "fine": 3.7,
+    "medium": 3.9,
+    "coarse": 4.2
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M4",
+   "system": "metric",
+   "coarsePitch": 0.7,
+   "finePitches": [
+    {
+     "pitch": 0.5,
+     "tapDrill": 3.5
+    }
+   ],
+   "majorDiameterMm": 4.0,
+   "majorDiameterIn": 0.1575,
+   "tapDrillCoarse": 3.3,
+   "clearance": {
+    "fine": 4.3,
+    "medium": 4.5,
+    "coarse": 4.8
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M5",
+   "system": "metric",
+   "coarsePitch": 0.8,
+   "finePitches": [
+    {
+     "pitch": 0.5,
+     "tapDrill": 4.5
+    }
+   ],
+   "majorDiameterMm": 5.0,
+   "majorDiameterIn": 0.1969,
+   "tapDrillCoarse": 4.2,
+   "clearance": {
+    "fine": 5.3,
+    "medium": 5.5,
+    "coarse": 5.8
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M6",
+   "system": "metric",
+   "coarsePitch": 1.0,
+   "finePitches": [
+    {
+     "pitch": 0.75,
+     "tapDrill": 5.25
+    }
+   ],
+   "majorDiameterMm": 6.0,
+   "majorDiameterIn": 0.2362,
+   "tapDrillCoarse": 5.0,
+   "clearance": {
+    "fine": 6.4,
+    "medium": 6.6,
+    "coarse": 7.0
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M8",
+   "system": "metric",
+   "coarsePitch": 1.25,
+   "finePitches": [
+    {
+     "pitch": 1.0,
+     "tapDrill": 7.0
+    }
+   ],
+   "majorDiameterMm": 8.0,
+   "majorDiameterIn": 0.315,
+   "tapDrillCoarse": 6.8,
+   "clearance": {
+    "fine": 8.4,
+    "medium": 9.0,
+    "coarse": 10.0
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M10",
+   "system": "metric",
+   "coarsePitch": 1.5,
+   "finePitches": [
+    {
+     "pitch": 1.25,
+     "tapDrill": 8.75
+    },
+    {
+     "pitch": 1.0,
+     "tapDrill": 9.0
+    }
+   ],
+   "majorDiameterMm": 10.0,
+   "majorDiameterIn": 0.3937,
+   "tapDrillCoarse": 8.5,
+   "clearance": {
+    "fine": 10.5,
+    "medium": 11.0,
+    "coarse": 12.0
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M12",
+   "system": "metric",
+   "coarsePitch": 1.75,
+   "finePitches": [
+    {
+     "pitch": 1.5,
+     "tapDrill": 10.5
+    },
+    {
+     "pitch": 1.25,
+     "tapDrill": 10.75
+    }
+   ],
+   "majorDiameterMm": 12.0,
+   "majorDiameterIn": 0.4724,
+   "tapDrillCoarse": 10.2,
+   "clearance": {
+    "fine": 13.0,
+    "medium": 13.5,
+    "coarse": 14.5
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M14",
+   "system": "metric",
+   "coarsePitch": 2.0,
+   "finePitches": [
+    {
+     "pitch": 1.5,
+     "tapDrill": 12.5
+    }
+   ],
+   "majorDiameterMm": 14.0,
+   "majorDiameterIn": 0.5512,
+   "tapDrillCoarse": 12.0,
+   "clearance": {
+    "fine": 15.0,
+    "medium": 15.5,
+    "coarse": 16.5
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M16",
+   "system": "metric",
+   "coarsePitch": 2.0,
+   "finePitches": [
+    {
+     "pitch": 1.5,
+     "tapDrill": 14.5
+    }
+   ],
+   "majorDiameterMm": 16.0,
+   "majorDiameterIn": 0.6299,
+   "tapDrillCoarse": 14.0,
+   "clearance": {
+    "fine": 17.0,
+    "medium": 17.5,
+    "coarse": 18.5
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M18",
+   "system": "metric",
+   "coarsePitch": 2.5,
+   "finePitches": [
+    {
+     "pitch": 2.0,
+     "tapDrill": 16.0
+    },
+    {
+     "pitch": 1.5,
+     "tapDrill": 16.5
+    }
+   ],
+   "majorDiameterMm": 18.0,
+   "majorDiameterIn": 0.7087,
+   "tapDrillCoarse": 15.5,
+   "clearance": {
+    "fine": 19.0,
+    "medium": 20.0,
+    "coarse": 21.0
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M20",
+   "system": "metric",
+   "coarsePitch": 2.5,
+   "finePitches": [
+    {
+     "pitch": 2.0,
+     "tapDrill": 18.0
+    },
+    {
+     "pitch": 1.5,
+     "tapDrill": 18.5
+    }
+   ],
+   "majorDiameterMm": 20.0,
+   "majorDiameterIn": 0.7874,
+   "tapDrillCoarse": 17.5,
+   "clearance": {
+    "fine": 21.0,
+    "medium": 22.0,
+    "coarse": 24.0
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M22",
+   "system": "metric",
+   "coarsePitch": 2.5,
+   "finePitches": [
+    {
+     "pitch": 2.0,
+     "tapDrill": 20.0
+    },
+    {
+     "pitch": 1.5,
+     "tapDrill": 20.5
+    }
+   ],
+   "majorDiameterMm": 22.0,
+   "majorDiameterIn": 0.8661,
+   "tapDrillCoarse": 19.5,
+   "clearance": {
+    "fine": 23.0,
+    "medium": 24.0,
+    "coarse": 26.0
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  },
+  {
+   "label": "M24",
+   "system": "metric",
+   "coarsePitch": 3.0,
+   "finePitches": [
+    {
+     "pitch": 2.0,
+     "tapDrill": 22.0
+    }
+   ],
+   "majorDiameterMm": 24.0,
+   "majorDiameterIn": 0.9449,
+   "tapDrillCoarse": 21.0,
+   "clearance": {
+    "fine": 25.0,
+    "medium": 26.0,
+    "coarse": 28.0
+   },
+   "source": "ISO 261 / ISO 262 (diameter, pitch); tap drill = d - P; clearance holes per ISO 273 (fine H12 / medium H13 / coarse H14)"
+  }
+ ]
+}

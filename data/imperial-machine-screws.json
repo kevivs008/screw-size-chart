@@ -1,0 +1,649 @@
+{
+ "meta": {
+  "title": "Imperial machine screws (UNC / UNF)",
+  "lastVerified": "2026-10-13",
+  "sources": [
+   "ASME B1.1",
+   "75% tap-drill chart",
+   "ASME B18.2.8"
+  ]
+ },
+ "rows": [
+  {
+   "label": "#0",
+   "system": "imperial",
+   "series": "number",
+   "majorDiameterIn": 0.06,
+   "majorDiameterMm": 1.524,
+   "unc": null,
+   "unf": {
+    "tpi": 80,
+    "tapDrill": "3/64",
+    "tapDrillIn": 0.0469
+   },
+   "clearance": {
+    "close": {
+     "drill": "#52",
+     "in": 0.0635
+    },
+    "normal": {
+     "drill": "#50",
+     "in": 0.07
+    },
+    "loose": {
+     "drill": "#46",
+     "in": 0.081
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "#1",
+   "system": "imperial",
+   "series": "number",
+   "majorDiameterIn": 0.073,
+   "majorDiameterMm": 1.854,
+   "unc": {
+    "tpi": 64,
+    "tapDrill": "#53",
+    "tapDrillIn": 0.0595
+   },
+   "unf": {
+    "tpi": 72,
+    "tapDrill": "#53",
+    "tapDrillIn": 0.0595
+   },
+   "clearance": {
+    "close": {
+     "drill": "#48",
+     "in": 0.076
+    },
+    "normal": {
+     "drill": "#46",
+     "in": 0.081
+    },
+    "loose": {
+     "drill": "#43",
+     "in": 0.089
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "#2",
+   "system": "imperial",
+   "series": "number",
+   "majorDiameterIn": 0.086,
+   "majorDiameterMm": 2.184,
+   "unc": {
+    "tpi": 56,
+    "tapDrill": "#50",
+    "tapDrillIn": 0.07
+   },
+   "unf": {
+    "tpi": 64,
+    "tapDrill": "#50",
+    "tapDrillIn": 0.07
+   },
+   "clearance": {
+    "close": {
+     "drill": "#43",
+     "in": 0.089
+    },
+    "normal": {
+     "drill": "#41",
+     "in": 0.096
+    },
+    "loose": {
+     "drill": "#37",
+     "in": 0.104
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "#3",
+   "system": "imperial",
+   "series": "number",
+   "majorDiameterIn": 0.099,
+   "majorDiameterMm": 2.515,
+   "unc": {
+    "tpi": 48,
+    "tapDrill": "#47",
+    "tapDrillIn": 0.0785
+   },
+   "unf": {
+    "tpi": 56,
+    "tapDrill": "#45",
+    "tapDrillIn": 0.082
+   },
+   "clearance": {
+    "close": {
+     "drill": "#38",
+     "in": 0.1015
+    },
+    "normal": {
+     "drill": "#36",
+     "in": 0.1065
+    },
+    "loose": {
+     "drill": "#32",
+     "in": 0.116
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "#4",
+   "system": "imperial",
+   "series": "number",
+   "majorDiameterIn": 0.112,
+   "majorDiameterMm": 2.845,
+   "unc": {
+    "tpi": 40,
+    "tapDrill": "#43",
+    "tapDrillIn": 0.089
+   },
+   "unf": {
+    "tpi": 48,
+    "tapDrill": "#42",
+    "tapDrillIn": 0.0935
+   },
+   "clearance": {
+    "close": {
+     "drill": "#32",
+     "in": 0.116
+    },
+    "normal": {
+     "drill": "#30",
+     "in": 0.1285
+    },
+    "loose": {
+     "drill": "#27",
+     "in": 0.144
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "#5",
+   "system": "imperial",
+   "series": "number",
+   "majorDiameterIn": 0.125,
+   "majorDiameterMm": 3.175,
+   "unc": {
+    "tpi": 40,
+    "tapDrill": "#38",
+    "tapDrillIn": 0.1015
+   },
+   "unf": {
+    "tpi": 44,
+    "tapDrill": "#37",
+    "tapDrillIn": 0.104
+   },
+   "clearance": {
+    "close": {
+     "drill": "#30",
+     "in": 0.1285
+    },
+    "normal": {
+     "drill": "#29",
+     "in": 0.136
+    },
+    "loose": {
+     "drill": "#23",
+     "in": 0.154
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "#6",
+   "system": "imperial",
+   "series": "number",
+   "majorDiameterIn": 0.138,
+   "majorDiameterMm": 3.505,
+   "unc": {
+    "tpi": 32,
+    "tapDrill": "#36",
+    "tapDrillIn": 0.1065
+   },
+   "unf": {
+    "tpi": 40,
+    "tapDrill": "#33",
+    "tapDrillIn": 0.113
+   },
+   "clearance": {
+    "close": {
+     "drill": "#27",
+     "in": 0.144
+    },
+    "normal": {
+     "drill": "#25",
+     "in": 0.1495
+    },
+    "loose": {
+     "drill": "#18",
+     "in": 0.1695
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "#8",
+   "system": "imperial",
+   "series": "number",
+   "majorDiameterIn": 0.164,
+   "majorDiameterMm": 4.166,
+   "unc": {
+    "tpi": 32,
+    "tapDrill": "#29",
+    "tapDrillIn": 0.136
+   },
+   "unf": {
+    "tpi": 36,
+    "tapDrill": "#29",
+    "tapDrillIn": 0.136
+   },
+   "clearance": {
+    "close": {
+     "drill": "#18",
+     "in": 0.1695
+    },
+    "normal": {
+     "drill": "#15",
+     "in": 0.18
+    },
+    "loose": {
+     "drill": "#10",
+     "in": 0.1935
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "#10",
+   "system": "imperial",
+   "series": "number",
+   "majorDiameterIn": 0.19,
+   "majorDiameterMm": 4.826,
+   "unc": {
+    "tpi": 24,
+    "tapDrill": "#25",
+    "tapDrillIn": 0.1495
+   },
+   "unf": {
+    "tpi": 32,
+    "tapDrill": "#21",
+    "tapDrillIn": 0.159
+   },
+   "clearance": {
+    "close": {
+     "drill": "#9",
+     "in": 0.196
+    },
+    "normal": {
+     "drill": "#5",
+     "in": 0.2055
+    },
+    "loose": {
+     "drill": "#2",
+     "in": 0.221
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "#12",
+   "system": "imperial",
+   "series": "number",
+   "majorDiameterIn": 0.216,
+   "majorDiameterMm": 5.486,
+   "unc": {
+    "tpi": 24,
+    "tapDrill": "#16",
+    "tapDrillIn": 0.177
+   },
+   "unf": {
+    "tpi": 28,
+    "tapDrill": "#14",
+    "tapDrillIn": 0.182
+   },
+   "clearance": {
+    "close": {
+     "drill": "#2",
+     "in": 0.221
+    },
+    "normal": {
+     "drill": "7/32",
+     "in": 0.2344
+    },
+    "loose": {
+     "drill": "1/4",
+     "in": 0.25
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "1/4",
+   "system": "imperial",
+   "series": "fractional",
+   "majorDiameterIn": 0.25,
+   "majorDiameterMm": 6.35,
+   "unc": {
+    "tpi": 20,
+    "tapDrill": "#7",
+    "tapDrillIn": 0.201
+   },
+   "unf": {
+    "tpi": 28,
+    "tapDrill": "#3",
+    "tapDrillIn": 0.213
+   },
+   "clearance": {
+    "close": {
+     "drill": "F",
+     "in": 0.257
+    },
+    "normal": {
+     "drill": "17/64",
+     "in": 0.2656
+    },
+    "loose": {
+     "drill": "9/32",
+     "in": 0.2812
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "5/16",
+   "system": "imperial",
+   "series": "fractional",
+   "majorDiameterIn": 0.3125,
+   "majorDiameterMm": 7.938,
+   "unc": {
+    "tpi": 18,
+    "tapDrill": "F",
+    "tapDrillIn": 0.257
+   },
+   "unf": {
+    "tpi": 24,
+    "tapDrill": "I",
+    "tapDrillIn": 0.272
+   },
+   "clearance": {
+    "close": {
+     "drill": "21/64",
+     "in": 0.3281
+    },
+    "normal": {
+     "drill": "11/32",
+     "in": 0.3438
+    },
+    "loose": {
+     "drill": "3/8",
+     "in": 0.375
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "3/8",
+   "system": "imperial",
+   "series": "fractional",
+   "majorDiameterIn": 0.375,
+   "majorDiameterMm": 9.525,
+   "unc": {
+    "tpi": 16,
+    "tapDrill": "5/16",
+    "tapDrillIn": 0.3125
+   },
+   "unf": {
+    "tpi": 24,
+    "tapDrill": "Q",
+    "tapDrillIn": 0.332
+   },
+   "clearance": {
+    "close": {
+     "drill": "25/64",
+     "in": 0.3906
+    },
+    "normal": {
+     "drill": "13/32",
+     "in": 0.4062
+    },
+    "loose": {
+     "drill": "7/16",
+     "in": 0.4375
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "7/16",
+   "system": "imperial",
+   "series": "fractional",
+   "majorDiameterIn": 0.4375,
+   "majorDiameterMm": 11.112,
+   "unc": {
+    "tpi": 14,
+    "tapDrill": "U",
+    "tapDrillIn": 0.368
+   },
+   "unf": {
+    "tpi": 20,
+    "tapDrill": "25/64",
+    "tapDrillIn": 0.3906
+   },
+   "clearance": {
+    "close": {
+     "drill": "29/64",
+     "in": 0.4531
+    },
+    "normal": {
+     "drill": "15/32",
+     "in": 0.4688
+    },
+    "loose": {
+     "drill": "1/2",
+     "in": 0.5
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "1/2",
+   "system": "imperial",
+   "series": "fractional",
+   "majorDiameterIn": 0.5,
+   "majorDiameterMm": 12.7,
+   "unc": {
+    "tpi": 13,
+    "tapDrill": "27/64",
+    "tapDrillIn": 0.4219
+   },
+   "unf": {
+    "tpi": 20,
+    "tapDrill": "29/64",
+    "tapDrillIn": 0.4531
+   },
+   "clearance": {
+    "close": {
+     "drill": "33/64",
+     "in": 0.5156
+    },
+    "normal": {
+     "drill": "17/32",
+     "in": 0.5312
+    },
+    "loose": {
+     "drill": "9/16",
+     "in": 0.5625
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "9/16",
+   "system": "imperial",
+   "series": "fractional",
+   "majorDiameterIn": 0.5625,
+   "majorDiameterMm": 14.288,
+   "unc": {
+    "tpi": 12,
+    "tapDrill": "31/64",
+    "tapDrillIn": 0.4844
+   },
+   "unf": {
+    "tpi": 18,
+    "tapDrill": "33/64",
+    "tapDrillIn": 0.5156
+   },
+   "clearance": {
+    "close": {
+     "drill": "37/64",
+     "in": 0.5781
+    },
+    "normal": {
+     "drill": "19/32",
+     "in": 0.5938
+    },
+    "loose": {
+     "drill": "5/8",
+     "in": 0.625
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "5/8",
+   "system": "imperial",
+   "series": "fractional",
+   "majorDiameterIn": 0.625,
+   "majorDiameterMm": 15.875,
+   "unc": {
+    "tpi": 11,
+    "tapDrill": "17/32",
+    "tapDrillIn": 0.5313
+   },
+   "unf": {
+    "tpi": 18,
+    "tapDrill": "37/64",
+    "tapDrillIn": 0.5781
+   },
+   "clearance": {
+    "close": {
+     "drill": "41/64",
+     "in": 0.6406
+    },
+    "normal": {
+     "drill": "21/32",
+     "in": 0.6562
+    },
+    "loose": {
+     "drill": "11/16",
+     "in": 0.6875
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "3/4",
+   "system": "imperial",
+   "series": "fractional",
+   "majorDiameterIn": 0.75,
+   "majorDiameterMm": 19.05,
+   "unc": {
+    "tpi": 10,
+    "tapDrill": "21/32",
+    "tapDrillIn": 0.6563
+   },
+   "unf": {
+    "tpi": 16,
+    "tapDrill": "11/16",
+    "tapDrillIn": 0.6875
+   },
+   "clearance": {
+    "close": {
+     "drill": "49/64",
+     "in": 0.7656
+    },
+    "normal": {
+     "drill": "25/32",
+     "in": 0.7812
+    },
+    "loose": {
+     "drill": "13/16",
+     "in": 0.8125
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "7/8",
+   "system": "imperial",
+   "series": "fractional",
+   "majorDiameterIn": 0.875,
+   "majorDiameterMm": 22.225,
+   "unc": {
+    "tpi": 9,
+    "tapDrill": "49/64",
+    "tapDrillIn": 0.7656
+   },
+   "unf": {
+    "tpi": 14,
+    "tapDrill": "13/16",
+    "tapDrillIn": 0.8125
+   },
+   "clearance": {
+    "close": {
+     "drill": "57/64",
+     "in": 0.8906
+    },
+    "normal": {
+     "drill": "29/32",
+     "in": 0.9062
+    },
+    "loose": {
+     "drill": "15/16",
+     "in": 0.9375
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  },
+  {
+   "label": "1",
+   "system": "imperial",
+   "series": "fractional",
+   "majorDiameterIn": 1.0,
+   "majorDiameterMm": 25.4,
+   "unc": {
+    "tpi": 8,
+    "tapDrill": "7/8",
+    "tapDrillIn": 0.875
+   },
+   "unf": {
+    "tpi": 12,
+    "tapDrill": "59/64",
+    "tapDrillIn": 0.9219
+   },
+   "clearance": {
+    "close": {
+     "drill": "1-1/64",
+     "in": 1.0156
+    },
+    "normal": {
+     "drill": "1-1/32",
+     "in": 1.0312
+    },
+    "loose": {
+     "drill": "1-1/16",
+     "in": 1.0625
+    }
+   },
+   "source": "ASME B1.1 (diameter, TPI); 75% tap-drill chart (tap drills); ASME B18.2.8 (clearance holes)"
+  }
+ ]
+}
