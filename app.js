@@ -10,7 +10,7 @@ var tb=$("#theme");if(tb)tb.addEventListener("click",function(){var r=document.d
 function load(){return ready||(ready=Promise.all(["imperial-machine-screws","metric-machine-screws","wood-screws","drill-bits"].map(function(n){return fetch("/data/"+n+".json").then(function(r){return r.json()})})).then(function(a){D.imp=a[0].rows;D.met=a[1].rows;D.wood=a[2].rows;D.drills=a[3];D.I={};D.imp.forEach(function(r){D.I[r.label]=r});D.M={};D.met.forEach(function(r){D.M[r.label]=r});D.W={};D.wood.forEach(function(r){D.W[r.label]=r})}))}
 // parser: returns {fam,row,tpi,pitch} or {err}
 function parse(q,type){
- var s=q.trim().toLowerCase().replace(/\u00d7/g,"x").replace(/\s+/g," "),m,label,tpi=null,pitch=null,fam;
+ var s=q.trim().toLowerCase().replace(/[\u00d7*]/g,"x").replace(/\s+/g," "),m,label,tpi=null,pitch=null,fam;
  if(!s)return{err:T.err};
  if(m=s.match(/^m ?(\d+(?:\.\d+)?)(?: ?x ?(\d+(?:\.\d+)?))?$/)){var r=D.M["M"+m[1]];if(!r)return{err:T.nomatch};
   pitch=m[2]?parseFloat(m[2]):r.coarsePitch;
