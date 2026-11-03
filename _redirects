@@ -1,1 +1,13 @@
 # 301s when a URL changes: /old-slug /new-slug 301
+/es/about  /about  301
+/es/contact  /contact  301
+/es/sources-and-method  /sources-and-method  301
+/pt/about  /about  301
+/pt/contact  /contact  301
+/pt/sources-and-method  /sources-and-method  301
+/de/about  /about  301
+/de/contact  /contact  301
+/de/sources-and-method  /sources-and-method  301
+/fr/about  /about  301
+/fr/contact  /contact  301
+/fr/sources-and-method  /sources-and-method  301
