@@ -1,0 +1,8 @@
+{
+  "_note": "Approved drill terms from the README. check_site.py fails if a language's hub + drill pages stop using them. Native-speaker review is still recommended.",
+  "es": ["agujero de paso", "broca para roscar", "agujero piloto"],
+  "pt": ["furo de passagem", "broca para rosca", "furo piloto"],
+  "de": ["Durchgangsloch", "Kernlochbohrer", "Vorbohrung"],
+  "fr": ["trou de passage", "foret de taraudage", "avant-trou"],
+  "ja": ["通し穴", "タップ下穴径", "下穴"]
+}

@@ -1,7 +1,8 @@
 (function(){
 "use strict";
-var T=Object.assign({dot:".",mh:"Sizes that share a diameter take different holes: a #8 machine screw and a #8 wood screw are not interchangeable. A caliper reading is never exact, so measure the thread crests and expect a small error.",enter:"Enter a diameter greater than zero.",go:"Look up",err:"Could not read that size. Try #8, #8-32, 1/4-20, M6, M8 x 1 or 1\".",copy:"Copy",copied:"Copied",nomatch:"No standard size matches that.",major:"Major diameter",src:"Source",rel:"Related sizes",cap:"Major diameter, true proportion. Length not shown."},window.I18N||{});
+var T=Object.assign({dec:".",dot:".",mh:"Sizes that share a diameter take different holes: a #8 machine screw and a #8 wood screw are not interchangeable. A caliper reading is never exact, so measure the thread crests and expect a small error.",enter:"Enter a diameter greater than zero.",go:"Look up",err:"Could not read that size. Try #8, #8-32, 1/4-20, M6, M8 x 1 or 1\".",copy:"Copy",copied:"Copied",nomatch:"No standard size matches that.",major:"Major diameter",src:"Source",rel:"Related sizes",cap:"Major diameter, true proportion. Length not shown."},window.I18N||{});
 var I18=window.I18N||{},tr=function(x){return x in I18?I18[x]:x};
+function asm(s){var m=/^Pilot hole for a (#\d+) wood screw: softwood ~ (\S+) in, hardwood ~ (\S+) in\. /.exec(s),t=tr("wood-assumption-template");return m&&t!=="wood-assumption-template"?t.replace("{n}",m[1]).replace("{s}",m[2]).replace("{h}",m[3]):s}
 var $=function(s,r){return(r||document).querySelector(s)};
 var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
 var D={},ready;
@@ -10,7 +11,7 @@ var tb=$("#theme");if(tb)tb.addEventListener("click",function(){var r=document.d
 function load(){return ready||(ready=Promise.all(["imperial-machine-screws","metric-machine-screws","wood-screws","drill-bits"].map(function(n){return fetch("/data/"+n+".json").then(function(r){return r.json()})})).then(function(a){D.imp=a[0].rows;D.met=a[1].rows;D.wood=a[2].rows;D.drills=a[3];D.I={};D.imp.forEach(function(r){D.I[r.label]=r});D.M={};D.met.forEach(function(r){D.M[r.label]=r});D.W={};D.wood.forEach(function(r){D.W[r.label]=r})}))}
 // parser: returns {fam,row,tpi,pitch} or {err}
 function parse(q,type){
- var s=q.trim().toLowerCase().replace(/[\u00d7*]/g,"x").replace(/\s+/g," "),m,label,tpi=null,pitch=null,fam;
+ var s=q.trim().toLowerCase().replace(/[\u00d7*]/g,"x").replace(/\s+/g," ").replace(/,/g,"."),m,label,tpi=null,pitch=null,fam;
  if(!s)return{err:T.err};
  if(m=s.match(/^m ?(\d+(?:\.\d+)?)(?: ?x ?(\d+(?:\.\d+)?))?$/)){var r=D.M["M"+m[1]];if(!r)return{err:T.nomatch};
   pitch=m[2]?parseFloat(m[2]):r.coarsePitch;
@@ -43,7 +44,7 @@ function ladder(rows,sel,dk){var s=60,g=9,x=6,out="",W=0,i,pos=[];
  return '<svg viewBox="0 0 '+W+' 124" aria-label="'+tr("Size ladder, circles at true relative diameter")+'">'+out+'</svg>'}
 function render(p,q){var r=p.row,rows=p.fam==="met"?D.met:p.fam==="wood"?D.wood:D.imp,dk=p.fam==="met"?"majorDiameterMm":"majorDiameterIn",din=r.majorDiameterIn,dmm=r.majorDiameterMm;
  var rel=rows.map(function(x){return x.label}).filter(function(l){return Math.abs(rows.map(function(x){return x.label}).indexOf(l)-rows.indexOf(r))<=2&&l!==r.label});
- var h='<div class="res"><div><div class="big">'+f4(din)+' in<span class="eq">'+dmm+' mm</span><button class="copy" type="button" data-c="'+f4(din)+' in / '+dmm+' mm">'+T.copy+'</button></div><dl>'+fields(p).map(function(f){return"<dt>"+esc(f[0])+"</dt><dd>"+esc(f[1])+"</dd>"}).join("")+'</dl>'+(p.fam==="wood"?'<p class="note">'+esc(r.assumption)+'</p>':"")+'<p class="hint">'+T.src+": "+esc(r.source)+'</p><div class="chips" aria-label="'+T.rel+'">'+rel.map(function(l){return'<button type="button" class="chip" data-q="'+esc(l)+'">'+esc(l)+'</button>'}).join("")+'</div></div><div>'+drawing(din)+'</div></div><div class="ladder">'+ladder(rows,r.label,p.fam==="met"?"majorDiameterMm":"majorDiameterIn")+'</div>';
+ var h='<div class="res"><div><div class="big">'+f4(din)+' in<span class="eq">'+dmm+' mm</span><button class="copy" type="button" data-c="'+f4(din)+' in / '+dmm+' mm">'+T.copy+'</button></div><dl>'+fields(p).map(function(f){return"<dt>"+esc(f[0])+"</dt><dd>"+esc(f[1])+"</dd>"}).join("")+'</dl>'+(p.fam==="wood"?'<p class="note">'+esc(asm(r.assumption))+'</p>':"")+'<p class="hint">'+T.src+": "+esc(tr(r.source))+'</p><div class="chips" aria-label="'+T.rel+'">'+rel.map(function(l){return'<button type="button" class="chip" data-q="'+esc(l)+'">'+esc(l)+'</button>'}).join("")+'</div></div><div>'+drawing(din)+'</div></div><div class="ladder">'+ladder(rows,r.label,p.fam==="met"?"majorDiameterMm":"majorDiameterIn")+'</div>';
  return h}
 function initLookup(){var f=$("#lookup");if(!f)return;var out=$("#result"),inp=$("#q"),ty=$("#type");
  function run(q){load().then(function(){var p=parse(q,ty.value);out.innerHTML=p.err?'<p class="note">'+esc(p.err)+'</p>':render(p,q)})}
@@ -68,7 +69,7 @@ function initFinder(){var s=$("#fSize");if(!s)return;var pu=$("#fPurpose"),va=$(
   if(c.fam==="imp"){if(p==="tap"){var t=c.row[v];name=t.tapDrill;inch=t.tapDrillIn;meth=tr("75% thread tap drill for ")+c.row.label+"-"+t.tpi+" "+v.toUpperCase()}else{var q=c.row.clearance[v];name=q.drill;inch=q.in;meth="ASME B18.2.8, "+tr(v==="close"?tr("Close fit"):v==="normal"?tr("Normal fit"):tr("Loose fit"))}}
   else if(c.fam==="met"){var mm;if(p==="tap"){if(v==="c")mm=c.row.tapDrillCoarse;else mm=c.row.finePitches.filter(function(f){return"f"+f.pitch===v})[0].tapDrill;meth=tr("Tap drill = diameter minus pitch")}else{mm=c.row.clearance[v];meth="ISO 273, "+tr(v==="fine"?tr("Fine (H12)"):v==="medium"?tr("Medium (H13)"):tr("Coarse (H14)"))}name=mm.toFixed(2)+" mm";inch=mm/25.4}
   else{if(p==="pilot"){name=v==="soft"?c.row.pilotSoftwood:c.row.pilotHardwood;inch=v==="soft"?c.row.pilotSoftwoodIn:c.row.pilotHardwoodIn;meth=tr("Pilot hole guidance for ")+(v==="soft"?tr("softwood"):tr("hardwood"))+tr(". Test on scrap: species and hardness change the ideal size.")}else{name=c.row.clearance;inch=c.row.clearanceIn;meth=tr("Clearance hole for the shank, guidance")}}
-  var n=nearest(inch);out.innerHTML='<div class="big">'+esc(name)+'<span class="eq">'+f4(inch)+' in</span></div><p>'+esc(meth)+(/[.。]$/.test(meth)?'':T.dot)+'</p><p class="hint">'+T.src+": "+esc(src)+'</p><h3>'+tr("Nearest common drill, by series")+'</h3><dl>'+Object.keys(SN).map(function(k){var b=n[k];return"<dt>"+SN[k]+"</dt><dd>"+esc(b.x.label)+" ("+f4(b.x.inch)+" in, "+(b.e<=.00005?tr("exact"):(b.x.inch>inch?"+":"-")+f4(b.e))+")</dd>"}).join("")+"</dl>"}
+  var n=nearest(inch);out.innerHTML='<div class="big">'+esc(name)+'<span class="eq">'+f4(inch)+' in</span></div><p>'+esc(meth)+(/[.。]$/.test(meth)?'':T.dot)+'</p><p class="hint">'+T.src+": "+esc(tr(src))+'</p><h3>'+tr("Nearest common drill, by series")+'</h3><dl>'+Object.keys(SN).map(function(k){var b=n[k];return"<dt>"+SN[k]+"</dt><dd>"+esc(b.x.label)+" ("+f4(b.x.inch)+" in, "+(b.e<=.00005?tr("exact"):(b.x.inch>inch?"+":"-")+f4(b.e))+")</dd>"}).join("")+"</dl>"}
  s.addEventListener("change",function(){purposes();calc()});pu.addEventListener("change",function(){vars();calc()});va.addEventListener("change",calc)}
 function initMatch(){var f=$("#match");if(!f)return;var out=$("#mOut");
  f.addEventListener("submit",function(e){e.preventDefault();var v=parseFloat($("#mVal").value),u=$("#mUnit").value;if(!(v>0)){out.innerHTML='<p class="note">'+T.enter+'</p>';return}
@@ -92,5 +93,7 @@ function initExplorer(){var tb=$("#xTbl");if(!tb)return;var st={fam:"imp",q:"",s
  tabs.forEach(function(b){b.addEventListener("click",function(){st.fam=b.dataset.f;draw()})});
  $("#xQ").addEventListener("input",function(e){st.q=e.target.value;draw()});$("#xSort").addEventListener("change",function(e){st.sort=e.target.value;draw()});
  if(location.search)draw()}
+// localised decimal separator for results (pt/es/de/fr set T.dec=",")
+if(T.dec&&T.dec!=="."){["#result","#fOut","#mOut"].forEach(function(s){var e=$(s);if(!e)return;new MutationObserver(function(){var w=document.createTreeWalker(e,NodeFilter.SHOW_TEXT),n,v;while(n=w.nextNode()){v=n.nodeValue.replace(/\bB\d+(?:\.\d+)+\b|(\d)\.(\d)/g,function(m,a,b){return a?a+T.dec+b:m});if(v!==n.nodeValue)n.nodeValue=v}}).observe(e,{childList:true,subtree:true})})}
 initLookup();initFinder();initMatch();initExplorer();
 })();

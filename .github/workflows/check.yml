@@ -1,0 +1,18 @@
+name: Site checks
+# Runs on every push and pull request. A red cross here means the site has a broken link, a stale sitemap,
+# a bad redirect or similar. Fix it before relying on the deploy. Nothing to install: the checks use only Python.
+on:
+  push:
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Data checks
+        run: python3 tools/validate.py
+      - name: Site checks
+        run: python3 tools/check_site.py
